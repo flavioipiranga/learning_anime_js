@@ -1,12 +1,6 @@
 <html>
     <head>
-        
-    <script type="text/javascript"
-        src="C:\Users\flavi\Documents\Animation_Javascript\hello_animate.js">
-    </script>
-
-    </head>
-
+   </head>
 
     <body>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
@@ -18,51 +12,49 @@
             hljs.highlightAll();
     </script>
 
-<style>
-    .square {
-      width: 20px;
-      height: 20px;
-      background: #6e3232;
-      margin: 10px;
-    }
+	<style>
+	    .square {
+	      width: 20px;
+	      height: 20px;
+	      background: #6e3232;
+	      margin: 10px;
+	    }
 
-    .c_header {
-        margin: 10px;
-        opacity: 1;
-    }
+	    .c_header {
+		margin: 10px;
+		opacity: 0;
+	    }
 
-    .c_function_1 {
-        margin: 10px;
-        
-        opacity: 1;
-    }
+	    .c_function_1 {
+		margin: 10px;
+		opacity: 0;
+	    }
 
-    .my-text {
-        display: inline-block;
-        
-    }
+	   .my-text {
+		display: inline-block;
+		
+	    }
 
-    .text-box {
-  text-align: center;
-  overflow: hidden;
-  font-size: 1em;
-  background: #282c34;
-  color: #abb2bf;
-}
+	    .text-box {
+		  text-align: center;
+		  overflow: hidden;
+		  font-size: 1em;
+		  background: #282c34;
+		  color: #abb2bf;
+	     }
+	</style>
 
-</style>
+	<div>
+	    <h1>Hello World</h1>
+	    <p id="text" style="color:purple;
+		    font-weight:bold;font-size:20px;"> </p>
+	</div>
 
-<div>
-    <h1>Hello World</h1>
-    <p id="text" style="color:purple;
-            font-weight:bold;font-size:20px;"> </p>
-</div>
-
-<div class="text-box">
-    <span class="c_header my-text"></span>
-    <p></p>
-    <span class="c_function_1"></span>
-</div>
+	<div class="text-box">
+	    <span class="c_header my-text"></span>
+	    <p></p>
+	    <span class="c_function_1"></span>
+	</div>
 
         <script type="text/javascript">
 
@@ -70,43 +62,43 @@
             document.getElementsByClassName("c_header")[0].innerHTML = hljs.highlight(
                                                                 '#include <stdio.h>',
                                                                 { language: 'c' }
-                                                            ).value ;
+                                                            ).value;
 
             document.getElementsByClassName("c_function_1")[0].innerHTML = hljs.highlight(
-                                                                function_1,
+                                                                'printf("hi");',
                                                                 { language: 'c' }
-                                                            ).value ;
+                                                            ).value;
 
-var tl = anime.timeline({
-  easing: 'easeOutExpo',
-  duration: 750
-});
+		var tl = anime.timeline({
+		  easing: 'easeOutExpo',
+		  duration: 750
+		});
 
-var tl = anime.timeline({loop: true})
+		var tl = anime.timeline({loop: true});
 
-// Add children
-tl
-.add({
-  targets: '.c_header .c_function_1',
-  easing: 'steps(200)',
-  opacity: 0,
-  translateY: [100, 0],
-  duration: 1400,
-})
-.add({
-  targets: '.c_header',
-  opacity: 1,
-  duration: 1000,
-  easing: 'easeInExpo',
-  delay: 1000
-})
-.add({
-  targets: '.c_function_1',
-  opacity: 1,
-  duration: 1000,
-  easing: 'easeInExpo',
-  delay: 1000
-})
+		// Add children
+		tl
+		.add({
+		  targets: '.c_header .c_function_1',
+		  easing: 'steps(200)',
+		  opacity: 0,
+		  translateY: [100, 0],
+		  duration: 1400,
+		})
+		.add({
+		  targets: '.c_header',
+		  opacity: 1,
+		  duration: 1000,
+		  easing: 'easeInExpo',
+		  delay: 1000,
+		})
+		.add({
+		  targets: '.c_function_1',
+		  opacity: 1,
+		  duration: 1000,
+		  easing: 'easeInExpo',
+		  delay: 1000,
+		});
 
     </script>
 
@@ -128,7 +120,7 @@ tl
 
 
     </script>
-</body>>
+</body>
 
 </html>
     

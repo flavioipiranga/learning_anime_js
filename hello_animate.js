@@ -7,17 +7,14 @@ var function_1 =
  }
  `
 
-let ball = anime({
-    targets: '',
-    translateY: '25vh', // how the ball moves on Y axis
-    duration: 300,// duration of the ball when it touches the 'ground'
-    loop: true, //loops the movement of the ball
-    direction: 'alternate',
-    easing: 'linear',// rogor moZraobs burti
-    scaleX: {
-        value: 1.1,// how wide the ball gets when it falls
-        duration: 150,//of the jump
-        delay: 268 // of the ball jumping up
-    }
-
-});
+let animation = anime({
+  targets: 'div',
+  // Properties 
+  translateX: 100,
+  borderRadius: 50,
+  // Property Parameters
+  duration: 2000,
+  easing: 'linear',
+  // Animation Parameters
+  direction: 'alternate'
+});  
